@@ -1,14 +1,14 @@
 package Catalyst::View::REST::XML;
 
 use strict;
-use base 'Catalyst::Base';
+use base 'Catalyst::View';
 use XML::Simple;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
-Catalyst::View::REST::XML - XML View Class
+Catalyst::View::REST::XML - (DEPRECATED) XML View Class
 
 =head1 SYNOPSIS
 
@@ -20,6 +20,10 @@ Catalyst::View::REST::XML - XML View Class
     1;
 
     $c->forward('MyApp::View::REST');
+
+=head1 DEPRECATION NOTICE
+
+This module has been deprecated in favor of L<Catalyst::Action::REST>.
 
 =head1 DESCRIPTION
 

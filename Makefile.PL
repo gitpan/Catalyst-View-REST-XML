@@ -1,11 +1,14 @@
-use ExtUtils::MakeMaker;
+use inc::Module::Install 0.87;
 
-WriteMakefile(
-    NAME      => 'Catalyst::View::REST::XML',
-    AUTHOR    => 'Sebastian Riedel (sri@oook.de)',
-    PREREQ_PM => {
-        Catalyst    => '2.99',
-        XML::Simple => 0
-    },
-    VERSION_FROM => 'XML.pm'
-);
+name 'Catalyst-View-REST-XML';
+all_from 'lib/Catalyst/View/REST/XML.pm';
+
+requires 'Catalyst::Runtime';
+requires 'XML::Simple';
+
+requires 'Test::More';
+
+auto_install;
+resources repository => 'http://dev.catalyst.perl.org/repos/Catalyst/trunk/historical/Catalyst-View-REST-XML/';
+
+WriteAll;
